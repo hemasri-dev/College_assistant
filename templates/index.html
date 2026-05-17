@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Assistant Chatbot</title>
+    <!-- Modern Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Chat Header -->
+        <header class="chat-header">
+            <div class="header-info">
+                <div class="bot-avatar">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div>
+                    <h1>College Assistant</h1>
+                    <p class="status">Online 🟢</p>
+                </div>
+            </div>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </header>
+
+        <!-- Chat History -->
+        <main class="chat-body" id="chat-box">
+            <div class="message bot-message">
+                <div class="message-content">
+                    Hello! I'm your College Assistant Chatbot. Ask me about courses, admissions, fees, placements, or hostels.
+                </div>
+                <div class="message-time">Just now</div>
+            </div>
+        </main>
+
+        <!-- Chat Input -->
+        <footer class="chat-footer">
+            <form id="chat-form" class="input-area">
+                <input type="text" id="user-input" placeholder="Type your question here..." autocomplete="off" required />
+                <button type="submit" id="send-btn" aria-label="Send Message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
